@@ -50,18 +50,20 @@ banner() {
 	clear
 	clear
 	printf "\n\e[1;35;47m                  \e[0m"
-printf "\n\e[1;35;47m █ █ █▆█ ███ ██▅  \e[0m"
-printf "\n\e[1;35;47m █▅█ █ █ █▆█ █▅█  \e[0m"
-printf "\n\e[1;35;47m                  \e[0m"
-printf "\n\n\e[3;34;40m UMod - Yangi Avlod Yuzerboti\e[0m\n\n"
+printf "\n\e[1;35;47m ▅▅▅           \e[0m"
+printf "\n\e[1;35;47m █▂▂  █ ▚▞ █ █▔█ █▚ \e[0m"
+printf "\n\e[1;35;47m █      █     █ █▅█ █▞\e[0m"
+printf "\n\e[1;35;47m                          \e[0m"
+printf "\n\n\e[3;34;40m FrozenMod - Userbot moduli\e[0m\n\n"
+printf "\n\n\e[3;34;40m Telegram - @one_frozen\e[0m\n\n"
 	
 }
 
 ##############################################################################
 
 banner
-printf '%s\n' "- Userbot yuklanishi 3-7 daqiqa"
-printf '%s' "- Daraja...  "
+printf '%s\n' "- Userbot tortib olinmoqda bu bir necha soniya vaqt olishi mumkin..."
+printf '%s' "- Yuklanmoqda...  "
 
 ##############################################################################
 
@@ -209,7 +211,7 @@ runin ${SUDO_CMD}"python$PYVER" -m pip install -r requirements.txt --upgrade --u
 	errorin "Requirements failed!"
 	exit 4
 }
-endspin "- Tayyor! Sozlandi."
+endspin "- Muvaffaqqiyatli yuklandi.😊😊😊😊"
 rm -f ../ftg-install.log
 touch .setup_complete
 # shellcheck disable=SC2086,SC2015
