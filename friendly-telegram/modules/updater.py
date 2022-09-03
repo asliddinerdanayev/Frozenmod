@@ -22,14 +22,14 @@ class UpdaterMod(loader.Module):
     """Updates itself"""
 
     strings = {
-        "name": "Umod_yangilash",
+        "name": "FMod yangilash♻️",
         "source": "<b>Manzil mavjud emas</b> <a href='{}'></a>",
-        "restarting_caption": "🌄 <b>«UMod» bazasi qayta ishga tushmoqda...</b>",
-        "downloading": "🌄 <b>Yangilanish yuklanmoqda...</b>",
-        "downloaded": "🌉 <b>Muvaffaqiyatli yuklandi.\n🌄 Endi</b> <code>.restart</code> <b>qo'llang.</b>",
-        "already_updated": "🌄 <b>Muvaffaqiyatli yangilandi!</b>",
-        "installing": "🌄 <b>Yangilanish oʻrnatilmoqda...</b>",
-        "success": "🌉 <b>Muvaffaqiyatli yakunlandi!\n🌄 Maʼlumot uchun: <code>.info</code></b>",
+        "restarting_caption": "♻️ <b>FMod  qayta ishga tushmoqda...</b>",
+        "downloading": "♻️ <b>Yangilanish yuklanmoqda...</b>",
+        "downloaded": "🌉 <b>Muvaffaqiyatli yuklandi.\n😶‍🌫️ Iltimos</b> <code>.restart</code> <b>qo'llang</b>",
+        "already_updated": "😇 <b>Muvaffaqiyatli yangilandi!</b>",
+        "installing": "♻️ <b>Yangilanish oʻrnatilmoqda...</b>",
+        "success": "😇 <b>Muvaffaqiyatli yakunlandi!\nℹ️ Maʼlumot uchun: <code>.info</code></b>",
         "heroku_warning": "🏙️ <b>Heroku Api token xatoligi. </b>Update was successful but updates will reset every time the bot restarts.",
         "origin_cfg_doc": "...",
         "lavhost": "...",
