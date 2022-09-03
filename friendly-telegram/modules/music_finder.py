@@ -1,11 +1,4 @@
-# ▀█▀ █▀▀ █▀▄▀█ █░█ █▀█
-# ░█░ ██▄ █░▀░█ █▄█ █▀▄
-# ═══════════════════════
-# █▀▀ █▀█ █▄▀ █ █▄░█ █▀█ █░█
-# ██▄ █▀▄ █░█ █ █░▀█ █▄█ ▀▄▀
-# ═════════════════════════════
-# meta developer: @netuzb
-# meta channel: @umodules
+
 
 version = (12, 3, 7)
 
@@ -19,10 +12,10 @@ class SpotifyDownloaderMod(loader.Module):
     """Music search module"""
     strings = {
         "name": "MusicFinder",
-        "yoq": "<b>🌇 Nothing found!</b>",
-        "qidiryapman": "<b>🐝 Wanted...</b>",
-        "eshe": "<b>🌇 Please try again!</b>",
-        "topmadim": "<b>🌇 No music found. Maybe you misspelled the name?</b>"}
+        "yoq": "<b>🎧 Qidirilmagan!</b>",
+        "qidiryapman": "<b>🐝 Qidirilmoqda...</b>",
+        "eshe": "<b>♻️ Iltimos qayta urunib ko'ring!</b>",
+        "topmadim": "<b>😔 Musiqa topilmadi, balki siz noto'g'ri ism yozgandirsiz?</b>"}
     
     async def client_ready(self, client, db):
         self.client = client
@@ -43,7 +36,7 @@ class SpotifyDownloaderMod(loader.Module):
         music = await self.client.inline_query('spotifysavebot', args)
         for mus in music:
             if mus.result.type == 'audio':
-                await self.client.send_file(message.peer_id, mus.result.document, reply_to=message.reply_to_msg_id, caption="🌇 <b>Music found!\n🌉 Found by</b> <code>@netuzb</code>")
+                await self.client.send_file(message.peer_id, mus.result.document, reply_to=message.reply_to_msg_id, caption="🎧 <b>Musiqa topildi!\n🏙🎧<b>Musiqa</b> <code>@one_frozen</code><b>tomonidan topildi</b>")
                 return await message.delete()
 
         return await message.edit(self.strings("topmadim", message))
@@ -58,5 +51,5 @@ class SpotifyDownloaderMod(loader.Module):
             await message.edit(self.strings("qidiryapman", message))
             music = await message.client.inline_query('lybot', args) 
             await message.delete() 
-            await message.client.send_file(message.to_id, music[0].result.document, caption="🌇 <b>Music found!\n🏙️ Found by</b> <code>@netuzb</code>", reply_to=reply.id if reply else None) 
-        except: return await message.client.send_message(message.chat_id, f"🌇 <b>{args}</b> - Not found on Spotify!\n🏙️ <b>Maybe you can search by <code> .vk</code>?</b>")
+            await message.client.send_file(message.to_id, music[0].result.document, caption="🎧 <b>Musiqa topildi!\n🏙🎧<b>Musiqa</b> <code>@one_frozen</code><b>tomonidan topildi</b>", reply_to=reply.id if reply else None) 
+        except: return await message.client.send_message(message.chat_id, f"🎧 <b>{args}</b> - Spotifydan topilmadi!\n🏙️ <b>Bundan foydalanishingiz mumkin <code> .vk</code>?</b>")
