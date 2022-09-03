@@ -1,11 +1,20 @@
 version: 2
 updates:
-  - package-ecosystem: gomod
+
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: daily
-    automerged_updates:
-      - match:
-          dependency_type: "production"
-          update_type: "all"
-    open-pull-requests-limit: 10
+      interval: "daily"
+
+  # Maintain dependencies for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+
+  # Maintain dependencies for Composer
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      interval: "daily"
