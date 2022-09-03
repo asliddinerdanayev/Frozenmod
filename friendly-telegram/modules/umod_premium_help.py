@@ -1,11 +1,4 @@
-# ▀█▀ █▀▀ █▀▄▀█ █░█ █▀█
-# ░█░ ██▄ █░▀░█ █▄█ █▀▄
-# ═══════════════════════
-# █▀▀ █▀█ █▄▀ █ █▄░█ █▀█ █░█
-# ██▄ █▀▄ █░█ █ █░▀█ █▄█ ▀▄▀
-# ═════════════════════════════
-# meta developer: @netuzb
-# meta channel: @umodules
+
 
 __version__ = (2, 2, 10)
 
@@ -24,32 +17,32 @@ class HelpMod(loader.Module):
     """UMod uchun yordam moduli"""
 
     strings = {
-        "name": "UMod_yordam",
-        "bad_module": "<b>🌄 Modul: <code>{}</code> - topilmadi!</b>",
-        "single_mod_header": "🌇 <b>Modul nomi:</b> {}",
-        "single_cmd": "\n🌄️ <b>{}{}</b> - ",
-        "undoc_cmd": "🌄️ Hujjat yo'q!",
-        "all_header": "🌄 MODULLAR: {} - BERKITILGAN: {}",
+        "name": "FrozenMod about",
+        "bad_module": "<b>🏔 Modul: <code>{}</code> - topilmadi!</b>",
+        "single_mod_header": "🏔 <b>Modul nomi:</b> {}",
+        "single_cmd": "\n🏔 <b>{}{}</b> - ",
+        "undoc_cmd": "🏔 Hujjat yo'q!",
+        "all_header": "🏔 MODULLAR: {} - BERKITILGAN: {}",
         "mod_tmpl": "\n{} «<b>{}</b>»",
         "first_cmd_tmpl": ": {}",
         "cmd_tmpl": ", {}",
-        "args": "🌄 <b>Topilmadi!</b>",
-        "no_mod": "🌇 <b>Modul nomini kiriting...</b>",
-        "hidden_shown": "<b>🌇 Yashirin modullar: {}\n🌉 Koʻrsatilgan modullar: {}\n\n</b>{}{}",
-        "ihandler": "\n🌄️ <b>{}</b> - ",
-        "undoc_ihandler": "🌄️ Hujjat yo'q!",
+        "args": "🏔 <b>Topilmadi!</b>",
+        "no_mod": "🏔 <b>Modul nomini kiriting...</b>",
+        "hidden_shown": "<b>🏔 Yashirin modullar: {}\n🌉 Koʻrsatilgan modullar: {}\n\n</b>{}{}",
+        "ihandler": "\n🏔 <b>{}</b> - ",
+        "undoc_ihandler": "🏔 Hujjat yo'q!",
     }
 
     def __init__(self):
         self.config = loader.ModuleConfig(
             "core_emoji",
-            "🌄️",
+            "🏔",
             lambda: "Core module bullet",
             "geek_emoji",
-            "🌄️",
+            "🏔",
             lambda: "UMod-only module bullet",
             "plain_emoji",
-            "🌄️",
+            "🏔",
             lambda: "Plain module bullet"
         )
 
@@ -131,7 +124,7 @@ class HelpMod(loader.Module):
             reply = self.strings("single_mod_header").format(utils.escape_html(name))
             if module.__doc__:
                 reply += (
-                    "<b>\n🌄 Modul vazifasi:</b> " + utils.escape_html(inspect.getdoc(module)) + "\n"
+                    "<b>\n🏔 Modul vazifasi:</b> " + utils.escape_html(inspect.getdoc(module)) + "\n"
                 )
 
             commands = {
@@ -262,10 +255,10 @@ class HelpMod(loader.Module):
 
             for cmd in icommands:
                 if first:
-                    tmp += self.strings("first_cmd_tmpl").format(f"🌄 {cmd}")
+                    tmp += self.strings("first_cmd_tmpl").format(f"🏔 {cmd}")
                     first = False
                 else:
-                    tmp += self.strings("cmd_tmpl").format(f"🌄 {cmd}")
+                    tmp += self.strings("cmd_tmpl").format(f"🏔 {cmd}")
 
             if commands or icommands:
                 tmp += "."
@@ -288,10 +281,10 @@ class HelpMod(loader.Module):
         
         text = utils.get_args_raw(message) 
         umod = f"{reply}\n{''.join(core_)}{''.join(plain_)}{''.join(inline_)}"
-        umod_turn = f"\n\n🌉 <b>«UMod» - yangi avlod yuzerboti.</b>"
-        umod_classic = "\n— <i>«Help» oynasining klassik koʻrinishini ochish uchun «<b>.helpc</b>» buyrugʻini ishlating</i>"
+        umod_turn = f"\n\n🏔 <b>FrozenMod - aqlli robotlar</b>"
+        umod_classic = "\n— <b>Yordam oynasining mukammal ko'rinishini ochish uchun </b> <code>.helpc</code> <b>buyrugʻini ishlating</b>"
         umod_mods = "\n— <i>Quyida sizdagi mavjud umumiy modullar soni hamda berkitilganlar soni koʻrsatilgan</i>"
-        asos = "🌉 <b>Zamonaviylashgan «Help» oynasi.</b>"
+        asos = "🏔 <b>Mukammallik darajasi.</b>"
         
         await self.inline.form(
                     text = f"{asos}{umod_mods}\n{''.join(core_)}{''.join(plain_)}{''.join(inline_)}" + umod_turn + umod_classic,
@@ -301,12 +294,20 @@ class HelpMod(loader.Module):
 							"callback": "umoduz"
 						}],
                     	[{
-							"text": "🌄 UMod", 
-							"url": "https://t.me/umodules"
+							"text": "🏔FrozenMod", 
+							"url": "https://t.me/frozenmods"
+						}],
+		        [{
+							"text": "🏔 Modullar", 
+							"url": "https://t.me/frozenmods"
+						}],	
+		        [{
+							"text": "🏔Admin", 
+							"url": "https://t.me/one_frozen"
 						},{
-							"text": "🪗 Modullar", 
-							"url": "https://t.me/umodules_modullar/6640"
-						}],						
+							"text": "Ismga buyurtma berish", 
+							"url": "https://t.me/one_frozen"
+						}],		
                     ],
                     ttl=10,
                     message=message,
@@ -349,7 +350,7 @@ class HelpMod(loader.Module):
             reply = self.strings("single_mod_header").format(utils.escape_html(name))
             if module.__doc__:
                 reply += (
-                    "<b>\n🌄 Modul vazifasi:</b> " + utils.escape_html(inspect.getdoc(module)) + "\n"
+                    "<b>\n🏔 Modul vazifasi:</b> " + utils.escape_html(inspect.getdoc(module)) + "\n"
                 )
 
             commands = {
@@ -480,10 +481,10 @@ class HelpMod(loader.Module):
 
             for cmd in icommands:
                 if first:
-                    tmp += self.strings("first_cmd_tmpl").format(f"🌄 {cmd}")
+                    tmp += self.strings("first_cmd_tmpl").format(f"🏔 {cmd}")
                     first = False
                 else:
-                    tmp += self.strings("cmd_tmpl").format(f"🌄 {cmd}")
+                    tmp += self.strings("cmd_tmpl").format(f"🏔 {cmd}")
 
             if commands or icommands:
                 tmp += "."
