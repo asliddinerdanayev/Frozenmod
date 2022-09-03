@@ -93,15 +93,15 @@ class CoreMod(loader.Module):
        "url": "https://t.me/UModules/166",
       }],                     
 [{
-       "text": "✍️ Typewriter", 
-       "url": "https://t.me/UModules/158",
+       "text": "✍️ Typing funksiyasi", 
+       "url": "https://t.me/frozenmods/7",
       },{
        "text": "🕋 JumaMuborak", 
        "url": "https://t.me/UModules/159",
       }],                     
 [{
-       "text": "💖 LoveMagic", 
-       "url": "https://t.me/UModules/156",
+       "text": "💖Men seni sevaman", 
+       "url": "https://t.me/frozenmods/14",
       },{
        "text": "🥰 LoveEmoji", 
        "url": "https://t.me/UModules/155",
