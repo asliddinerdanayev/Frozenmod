@@ -69,7 +69,7 @@ class CoreMod(loader.Module):
     async def infocmd(self, message: Message) -> None:
         """UMod tekshiruvchi"""
 
-        umod_ftgver = """🌄 <b>Barakalla! Sizda «UMod»!</b> 
+        umod_ftgver = """<b>Ajoyib!</b> 
 — <i>Ayni damda ushbu talqin takomillashgan sanaladi</i>
 
 🌄 <b>«Quyidagi versiya»</b> <code>2.5.32</code>
@@ -80,7 +80,7 @@ class CoreMod(loader.Module):
         await self.inline.form(
                     text = umod_ftgver,
                     reply_markup=[
-                        [{"text": "🌇 UMod - yuzerbot kanali", "url": "https://t.me/umodules"}],                        
+                        [{"text": "FrozenMods", "url": "https://t.me/frozenmods"}],                        
                         [{
        "text": "👇 TREND MODULLARIMIZ", 
        "callback": "umoduz",
