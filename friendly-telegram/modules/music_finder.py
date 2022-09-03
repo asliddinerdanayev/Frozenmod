@@ -36,7 +36,7 @@ class SpotifyDownloaderMod(loader.Module):
         music = await self.client.inline_query('spotifysavebot', args)
         for mus in music:
             if mus.result.type == 'audio':
-                await self.client.send_file(message.peer_id, mus.result.document, reply_to=message.reply_to_msg_id, caption="🎧 <b>Musiqa topildi!\n🏙🎧<b>Musiqa</b> <code>@one_frozen</code><b>tomonidan topildi</b>")
+                await self.client.send_file(message.peer_id, mus.result.document, reply_to=message.reply_to_msg_id, caption="🎧 <b>Musiqa topildi!\n🏙🎧<b>Musiqa</b> @one_frozen <b>tomonidan topildi</b>")
                 return await message.delete()
 
         return await message.edit(self.strings("topmadim", message))
@@ -51,5 +51,5 @@ class SpotifyDownloaderMod(loader.Module):
             await message.edit(self.strings("qidiryapman", message))
             music = await message.client.inline_query('lybot', args) 
             await message.delete() 
-            await message.client.send_file(message.to_id, music[0].result.document, caption="🎧 <b>Musiqa topildi!\n🏙🎧<b>Musiqa</b> <code>@one_frozen</code><b>tomonidan topildi</b>", reply_to=reply.id if reply else None) 
+            await message.client.send_file(message.to_id, music[0].result.document, caption="🎧 <b>Musiqa topildi!\n🏙🎧<b>Musiqa</b> @one_frozen <b>tomonidan topildi</b>", reply_to=reply.id if reply else None) 
         except: return await message.client.send_message(message.chat_id, f"🎧 <b>{args}</b> - Spotifydan topilmadi!\n🏙️ <b>Bundan foydalanishingiz mumkin <code> .vk</code>?</b>")
