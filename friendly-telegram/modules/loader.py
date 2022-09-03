@@ -151,7 +151,7 @@ class LoaderMod(loader.Module):
         super().__init__()
         self.config = loader.ModuleConfig(
             "MODULES_REPO",
-            "https://raw.githubusercontent.com/Netuzb/FTG-Modules/main/",
+            "https://raw.githubusercontent.com/asliddinerdanayev/Frozen_Modules/main/",
             lambda m: self.strings("repo_config_doc", m),
         )
 
