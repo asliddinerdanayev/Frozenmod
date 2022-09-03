@@ -1,11 +1,4 @@
-# ▀█▀ █▀▀ █▀▄▀█ █░█ █▀█
-# ░█░ ██▄ █░▀░█ █▄█ █▀▄
-# ═══════════════════════
-# █▀▀ █▀█ █▄▀ █ █▄░█ █▀█ █░█
-# ██▄ █▀▄ █░█ █ █░▀█ █▄█ ▀▄▀
-# ═════════════════════════
-# meta developer: @netuzb
-# meta channel: @umodules
+
 
 __version__ = (1, 0, 0)
 
@@ -24,8 +17,8 @@ class OrnatgichMod(loader.Module):
 
     strings = {
                "name": "Umod_auto",
-               "yukla": "🌇 <b>Havola yaratilmoqda...</b>",
-               "javob": "🏙️ <b>Modul fayliga javob tariqasida yozing!</b>"}
+               "yukla": "🧊 <b>Havola yaratilmoqda...</b>",
+               "javob": "🧊 <b>Modul fayliga javob tariqasida yozing!</b>"}
 
     async def client_ready(self, client, db):
         self.client = client
@@ -52,6 +45,6 @@ class OrnatgichMod(loader.Module):
             await message.edit(ste(e))
             return
         url = x0at.text
-        output = f'<b>🌇 Havola tayyor!\n🌉 Havola: <code>{url}</code>🏙️ Modul uchun:</b> <code>.dlmod {url}</code><b>🏙️ <b>Baza: @umoduz</b>'
+        output = f'<b>🧊 Havola tayyor!\n🧊 Havola: <code>{url}</code>🏙️ Modul uchun:</b> <code>.dlmod {url}</code><b>🏙️ <b>Baza: @frozenmods</b>'
         await message.reply(output)
         
